@@ -46,7 +46,7 @@ services:
     depends_on:
       - client
       - webapi
-      - nodeapi
+      - api
     
   emongo:
     image: mongo:4
