@@ -32,7 +32,6 @@ services:
     container_name: webapi
     depends_on:
       - mysqldb
-      - nginx
 
   nginx:
     restart: always
@@ -45,8 +44,6 @@ services:
     command: [nginx-debug, '-g', 'damon off;']
     depends_on:
       - client
-      - webapi
-      - api
     
   emongo:
     image: mongo:4
