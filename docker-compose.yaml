@@ -42,8 +42,6 @@ services:
     ports:
       - "80:80"
     command: [nginx-debug, '-g', 'damon off;']
-    depends_on:
-      - client
     
   emongo:
     image: mongo:4
